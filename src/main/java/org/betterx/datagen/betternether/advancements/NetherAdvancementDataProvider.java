@@ -120,63 +120,14 @@ public class NetherAdvancementDataProvider extends AdvancementDataProvider {
                 .build();
 
 
-        ResourceLocation rubyOre = AdvancementManager.Builder
-                .create(BetterNether.makeID("ruby_ore"))
-                .parent(enterNether)
-                .startDisplay(NetherItems.NETHER_RUBY)
-                .endDisplay()
-                .addInventoryChangedCriterion("ruby_ore", NetherItems.NETHER_RUBY)
-                .requirements(RequirementsStrategy.OR)
-                .build();
 
 
-        ResourceLocation flames = AdvancementManager.Builder
-                .create(BetterNether.makeID("flaming_ruby"))
-                .parent(rubyOre)
-                .startDisplay(NetherTemplates.FLAMING_RUBY_TEMPLATE)
-                .frame(FrameType.GOAL)
-                .endDisplay()
-                .addInventoryChangedCriterion("flaming_ruby", NetherTemplates.FLAMING_RUBY_TEMPLATE)
-                .requirements(RequirementsStrategy.AND)
-                .build();
 
-        ResourceLocation flamingTools = AdvancementManager.Builder
-                .create(BetterNether.makeID("flaming_tools"))
-                .parent(flames)
-                .startDisplay(NetherItems.FLAMING_RUBY_SET.getSlot(EquipmentSet.PICKAXE_SLOT))
-                .frame(FrameType.GOAL)
-                .endDisplay()
-                .addToolSetCriterion(NetherItems.FLAMING_RUBY_SET)
-                .requirements(RequirementsStrategy.AND)
-                .build();
 
-        ResourceLocation flamingArmor = AdvancementManager.Builder
-                .create(BetterNether.makeID("flaming_armor"))
-                .parent(flames)
-                .startDisplay(NetherItems.FLAMING_RUBY_SET.getSlot(EquipmentSet.CHESTPLATE_SLOT))
-                .frame(FrameType.GOAL)
-                .endDisplay()
-                .addArmorSetCriterion(NetherItems.FLAMING_RUBY_SET)
-                .requirements(RequirementsStrategy.AND)
-                .build();
 
-        ResourceLocation rubyTools = AdvancementManager.Builder
-                .create(BetterNether.makeID("ruby_tools"))
-                .parent(rubyOre)
-                .startDisplay(NetherItems.NETHER_RUBY_SET.getSlot(EquipmentSet.PICKAXE_SLOT))
-                .endDisplay()
-                .addToolSetCriterion(NetherItems.NETHER_RUBY_SET)
-                .requirements(RequirementsStrategy.OR)
-                .build();
 
-        ResourceLocation rubyGear = AdvancementManager.Builder
-                .create(BetterNether.makeID("ruby_gear"))
-                .parent(rubyTools)
-                .startDisplay(NetherItems.NETHER_RUBY_SET.getSlot(EquipmentSet.CHESTPLATE_SLOT))
-                .endDisplay()
-                .addArmorSetCriterion(NetherItems.NETHER_RUBY_SET)
-                .requirements(RequirementsStrategy.AND)
-                .build();
+
+
 
         ResourceLocation cincinnasiteOre = AdvancementManager.Builder
                 .create(BetterNether.makeID("cincinnasite_ore"))
@@ -187,43 +138,9 @@ public class NetherAdvancementDataProvider extends AdvancementDataProvider {
                 .requirements(RequirementsStrategy.OR)
                 .build();
 
-        ResourceLocation cincinnasiteTools = AdvancementManager.Builder
-                .create(BetterNether.makeID("cincinnasite_tools"))
-                .parent(cincinnasiteOre)
-                .startDisplay(NetherItems.CINCINNASITE_SET.getSlot(EquipmentSet.PICKAXE_SLOT))
-                .endDisplay()
-                .addToolSetCriterion(NetherItems.CINCINNASITE_SET)
-                .requirements(RequirementsStrategy.OR)
-                .build();
 
-        ResourceLocation cincinnasiteGear = AdvancementManager.Builder
-                .create(BetterNether.makeID("cincinnasite_gear"))
-                .parent(cincinnasiteTools)
-                .startDisplay(NetherItems.CINCINNASITE_SET.getSlot(EquipmentSet.CHESTPLATE_SLOT))
-                .endDisplay()
-                .addArmorSetCriterion(NetherItems.CINCINNASITE_SET)
-                .requirements(RequirementsStrategy.AND)
-                .build();
 
-        ResourceLocation cincinnasiteDiamond = AdvancementManager.Builder
-                .create(BetterNether.makeID("cincinnasite_diamond"))
-                .parent(cincinnasiteTools)
-                .startDisplay(NetherTemplates.CINCINNASITE_DIAMOND_TEMPLATE)
-                .frame(FrameType.GOAL)
-                .endDisplay()
-                .addInventoryChangedCriterion("cincinnasite_diamond", NetherTemplates.CINCINNASITE_DIAMOND_TEMPLATE)
-                .requirements(RequirementsStrategy.AND)
-                .build();
 
-        ResourceLocation cincinnasiteDiamondTools = AdvancementManager.Builder
-                .create(BetterNether.makeID("cincinnasite_diamond_tools"))
-                .parent(cincinnasiteDiamond)
-                .startDisplay(NetherItems.CINCINNASITE_DIAMOND_SET.getSlot(EquipmentSet.PICKAXE_SLOT))
-                .frame(FrameType.GOAL)
-                .endDisplay()
-                .addToolSetCriterion(NetherItems.CINCINNASITE_DIAMOND_SET)
-                .requirements(RequirementsStrategy.AND)
-                .build();
 
         ResourceLocation forge = AdvancementManager.Builder
                 .create(BetterNether.makeID("cincinnasite_forge"))
@@ -276,7 +193,7 @@ public class NetherAdvancementDataProvider extends AdvancementDataProvider {
         ResourceLocation allTheBiomes = AdvancementManager.Builder
                 .create(BetterNether.makeID("all_the_biomes"))
                 .parent(city)
-                .startDisplay(NetherItems.NETHER_RUBY_SET.getSlot(EquipmentSet.BOOTS_SLOT))
+                .startDisplay(NetherItems.NETHER_RUBY)
                 .frame(FrameType.CHALLENGE)
                 .endDisplay()
                 .addVisitBiomesCriterion(NetherBiomeBuilder.getAllBnBiomes()

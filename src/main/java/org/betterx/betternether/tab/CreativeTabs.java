@@ -23,8 +23,6 @@ public class CreativeTabs {
                              .build()
                              .createBlockTab(NetherBlocks.JUNGLE_GRASS)
                              .build()
-                             .createItemsTab(NetherItems.FLAMING_RUBY_SET.getSlot(EquipmentSet.PICKAXE_SLOT))
-                             .build()
                              .processBCLRegistry()
                              .register();
     }

@@ -20,21 +20,6 @@ public class NetherTemplates {
                     List.of(SmithingTemplates.EMPTY_SLOT_INGOT)
             );
 
-    public static final SmithingTemplateItem FLAMING_RUBY_TEMPLATE = NetherItems
-            .getItemRegistry()
-            .registerSmithingTemplateItem(
-                    BetterNether.makeID("flaming_ruby_upgrade"),
-                    SmithingTemplates.ARMOR_AND_TOOLS,
-                    List.of(EMPTY_SLOT_BLOCK)
-            );
-
-    public static final SmithingTemplateItem CINCINNASITE_DIAMOND_TEMPLATE = NetherItems
-            .getItemRegistry()
-            .registerSmithingTemplateItem(
-                    BetterNether.makeID("cincinnasite_diamond_upgrade"),
-                    List.of(SmithingTemplates.EMPTY_SLOT_DIAMOND),
-                    List.of(SmithingTemplates.EMPTY_SLOT_INGOT)
-            );
 
     public static void ensureStaticallyLoaded() {
     }

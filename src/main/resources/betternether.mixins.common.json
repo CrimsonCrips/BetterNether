@@ -5,8 +5,6 @@
   "mixins": [
     "AbstractFurnaceBlockEntityMixin",
     "BlockAgeProcessorMixin",
-    "BlockBehaviourAccessor",
-    "BlockBehaviourMixin",
     "BrewingRecipeRegistryMixin",
     "CraftingScreenHandlerMixin",
     "DefaultAttributeRegistryMixin",
